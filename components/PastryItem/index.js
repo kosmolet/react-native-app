@@ -3,15 +3,13 @@ import { View, Text, ImageBackground } from "react-native";
 import NavButton from "../NavButton";
 import styles from "./style";
 
-const PastryItem = () => {
+const PastryItem = (props) => {
+  const { title, price, imagePath } = props;
   return (
     <View style={styles.croissantContainer}>
-      <ImageBackground
-        source={require("../../assets/images/cr1.jpg")}
-        style={styles.image}
-      />
-      <Text style={styles.title}>Almond Croissant</Text>
-      <Text style={styles.subtitle}>Starting at 3$</Text>
+      <ImageBackground source={imagePath} style={styles.image} />
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.subtitle}>{`from ${price}$`}</Text>
       <NavButton
         type="primary"
         content={"Order"}

@@ -6,7 +6,11 @@ import PastryItem from "./components/PastryItem";
 export default function App() {
   return (
     <View style={styles.container}>
-      <PastryItem />
+      <PastryItem
+        title="Almond Croissant"
+        price="5"
+        imagePath={require("./assets/images/cr1.jpg")}
+      />
       <StatusBar style="auto" />
     </View>
   );
