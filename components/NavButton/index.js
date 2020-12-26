@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable, Button } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import styles from "./style";
 
 const NavButton = (props) => {
